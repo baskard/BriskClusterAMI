@@ -17,12 +17,12 @@ sudo apt-get -y --force-yes install git ant sun-java6-jdk
 git config --global color.ui auto
 git config --global color.diff auto
 git config --global color.status auto
-git clone git://github.com/riptano/TempBrisk.git
-mv TempBrisk/* ./
-mv TempBrisk/.presetup ./
-mv TempBrisk/.*py ./
-mv TempBrisk/.git/ ./
-rm -rf TempBrisk/
+git clone git://github.com/riptano/BriskClusterAMI.git
+mv BriskClusterAMI/* ./
+mv BriskClusterAMI/.presetup ./
+mv BriskClusterAMI/.*py ./
+mv BriskClusterAMI/.git/ ./
+rm -rf BriskClusterAMI/
 # git checkout tags/$(head -n 1 .presetup/VERSION)
 git clone git://github.com/riptano/brisk.git
 cd brisk
