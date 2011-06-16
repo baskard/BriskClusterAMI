@@ -256,7 +256,7 @@ def getAddresses():
     while stayinloop:
         print '[INFO] Reflector loop...'
         defaultReflector = 'http://reflector.datastax.com/brisk-reflector.php'
-        if options and options.vanillanodes and options.vanillanodes != options.clustersize:
+        if options and options.vanillanodes and int(options.vanillanodes) != int(options.clustersize):
             req = urllib2.Request(defaultReflector + '?indexid=' + str(launchindex) + '&reservationid=' + reservationid + '&internalip=' + internalip + '&externaldns=' + publichostname + '&secondDCstart=' + str(options.vanillanodes))
             expectedResponses = 2
         else:
@@ -286,7 +286,7 @@ def getAddresses():
                 clusterlist.append(r[0])
                 opscenterseed = clusterlist[0]
                 
-                if options and options.vanillanodes:
+                if options and options.vanillanodes and int(options.vanillanodes) != int(options.clustersize):
                     # Add one more IP to be a seed
                     clusterlist.append(r[1])
                 stayinloop = False
