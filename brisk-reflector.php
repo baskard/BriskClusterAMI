@@ -123,7 +123,7 @@ function newStats($initialSize){
 
 # Only called when finding an existing seed
 function updateStats(){
-  global $db, $statstable, $reservationid;
+  global $db, $statstable, $reservationid, $indexid;
   $query = $db->prepare("SELECT cluster_size
                          FROM $statstable 
                          WHERE reservation_id=:reservationid");
@@ -131,7 +131,7 @@ function updateStats(){
   $query->execute();
   $results = $query->fetchAll();
   
-  $newValue = $results[0]['cluster_size'] + 1;
+  $newValue = max($results[0]['cluster_size'], intval($indexid) + 1);
   $query = $db->prepare("UPDATE $statstable
                          SET cluster_size=$newValue
                          WHERE reservation_id=:reservationid");
