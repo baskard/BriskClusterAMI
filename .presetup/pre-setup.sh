@@ -26,7 +26,7 @@ rm -rf BriskClusterAMI/
 # git checkout tags/$(head -n 1 .presetup/VERSION)
 git clone git://github.com/riptano/brisk.git
 cd brisk
-git checkout tags/beta1
+git checkout tags/beta2
 ant
 
 sudo su
