@@ -49,8 +49,8 @@ def pipe(command1, command2, log=True):
 
 
 
-if os.path.isfile('.ami_is_in_dev_mode'):
-    exe('git pull')
+# if os.path.isfile('.ami_is_in_dev_mode'):
+#     exe('git pull')
 
 # Begin configuration this is only run once in Public Packages
 if os.path.isfile('.configurebrisk.py'):
