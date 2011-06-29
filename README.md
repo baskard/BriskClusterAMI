@@ -3,7 +3,9 @@ Summary
 DataStax's Amazon Machine Image is the quickest way to get a Brisk
 cluster up and running on EC2.
 
-Search for AMIs by using the term: datastax_brisk_cluster_ami
+Search for AMIs by using the term: 
+
+    datastax_brisk_cluster_ami
 
 
 Quickstart
@@ -69,7 +71,7 @@ To start Brisk again, simply run
 for a Brisk node, or
 
     sudo ~/brisk/bin/brisk cassandra
-    
+
 for a vanilla Cassandra node.
 
 Important note on VM restarts
