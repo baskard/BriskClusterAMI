@@ -11,36 +11,37 @@ Quickstart
 
 Launch the number of instances desired in your cluster with the User
 Data field set to
+
     -s <number of instances being started>
 
 
 Options
 =======
 
---clustersize <size> (or -s <size>)
-  Used by the configuration script to evenly space the Brisk node
-  tokens so each machine gets an equal share of data.  If omitted,
-  nodes will receive random tokens.
+    --clustersize <size> (or -s <size>)
+      Used by the configuration script to evenly space the Brisk node
+      tokens so each machine gets an equal share of data.  If omitted,
+      nodes will receive random tokens.
 
---vanillanodes <size> (or -v <size>)
-  Used by the configuration script to assign the first N nodes to be
-  non-task tracker Brisk nodes.
+    --vanillanodes <size> (or -v <size>)
+      Used by the configuration script to assign the first N nodes to be
+      non-task tracker Brisk nodes.
 
---cfsreplication <size> (or -c <size>)
-  Sets the cfsreplication factor at startup.
+    --cfsreplication <size> (or -c <size>)
+      Sets the cfsreplication factor at startup.
 
---opscenter <user>:<pass> (or -o <user>:<pass>)
-  Installs OpsCenter using the provided username and password recieved
-  during OpsCenter registration.
-  
-  Visit http://www.datastax.com/opscenter for a free registration.
+    --opscenter <user>:<pass> (or -o <user>:<pass>)
+      Installs OpsCenter using the provided username and password recieved
+      during OpsCenter registration.
+      
+      Visit http://www.datastax.com/opscenter for a free registration.
 
---paidopscenter <user>:<pass> (or -p <user>:<pass>)
-  Installs OpsCenter using the provided username and password recieved
-  during OpsCenter registration for paying customers.
+    --paidopscenter <user>:<pass> (or -p <user>:<pass>)
+      Installs OpsCenter using the provided username and password recieved
+      during OpsCenter registration for paying customers.
 
---clustername <name> (or -n <name>)
-  Assigns the cluster with a chosen cluster name.
+    --clustername <name> (or -n <name>)
+      Assigns the cluster with a chosen cluster name.
 
 
 Step-by-step
@@ -54,15 +55,21 @@ Post-install
 ============
 
 To stop Brisk, simply run
+
     ps auwx | grep brisk
+
 and kill the associated PID without
+
     sudo kill <PID>
 
 To start Brisk again, simply run
+
     sudo ~/brisk/bin/brisk cassandra -t
+
 for a Brisk node, or
 
     sudo ~/brisk/bin/brisk cassandra
+    
 for a vanilla Cassandra node.
 
 Important note on VM restarts
