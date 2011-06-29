@@ -37,3 +37,8 @@ exit
 cd
 history -c
 sudo python .presetup/run.py && sudo chown -R ubuntu:ubuntu . && rm -rf ~/.bash_history && history -c
+
+
+
+
+# git pull && rm -rf ~/.bash_history && history -c

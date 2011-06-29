@@ -90,3 +90,13 @@ Implementation details
 
 See FILES.txt for a description of how the scripts here configure the
 AMI for Brisk.
+
+Branching details
+=================
+
+Feel free to fork off this project and offer any suggestions that you
+find along the way.
+
+Also, if you're interested in the whole process: read up on the saving
+process here:
+http://www.datastax.com/dev/blog/personalizing-your-own-brisk-ami
