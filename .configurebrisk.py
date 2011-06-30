@@ -126,9 +126,9 @@ def getAddresses():
         parser.add_option("-e", "--email", action="store", type="string", dest="email")
         # Option that specifies how the ring will be divided
         parser.add_option("-n", "--clustername", action="store", type="string", dest="clustername")
-        # Option that specifies how the ring will be divided
+        # Option that specifies the user:pass for a paid version of OpsCenter
         parser.add_option("-p", "--paidopscenter", action="store", type="string", dest="paidopscenter")
-        # Option that specifies how the ring will be divided
+        # Option that specifies the user:pass for a free version of OpsCenter
         parser.add_option("-o", "--opscenter", action="store", type="string", dest="opscenter")
         # Option that specifies how the ring will be divided
         parser.add_option("-c", "--cfsreplication", action="store", type="string", dest="cfsreplication")
